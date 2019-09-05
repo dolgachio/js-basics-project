@@ -55,7 +55,7 @@ class Header {
 
     constructor(element) {
         element.innerHTML = `
-        <nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <div>
             <button class="navbar-toggler d-none d-md-inline-flex d-inline-flex d-lg-none">
@@ -91,17 +91,13 @@ class Header {
             </div>
         </div>
     </div>
-</nav>`;
+</nav>
+`;
         const SHOW_CLASS = "show";
         let button = document.querySelector("button.navbar-toggler");
         button.addEventListener("click", () => {
             let menu = document.querySelector("#navbarsExample07");
-            let classes = menu.classList;
-            if (classes.contains(SHOW_CLASS)) {
-                classes.remove(SHOW_CLASS)
-            } else {
-                classes.add(SHOW_CLASS)
-            }
+            menu.classList.toggle(SHOW_CLASS);
         })
     }
 }
